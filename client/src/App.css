@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: auto;
+  background-color: transparent;
 }
 
 .search-header h2 {
@@ -86,16 +86,17 @@ button.btn:hover,
   box-shadow: 0 0 10px #00c3ff;
 }
 
+/* ✅ Scrollable and centered table wrapper */
 .table-responsive {
-  overflow-x: auto;
   width: 100%;
-  margin-top: 2rem;
+  overflow-x: auto;
   padding-bottom: 1rem;
+  margin-top: 2rem;
   -webkit-overflow-scrolling: touch;
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
+/* ✅ Fixed table width so scroll works */
 .table {
   min-width: 1000px;
   width: max-content;
@@ -103,6 +104,7 @@ button.btn:hover,
   color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
 }
 
 thead th {
@@ -178,6 +180,7 @@ select.form-select:focus {
   box-shadow: 0 0 8px #00c3ff;
 }
 
+/* ✅ Mobile view adjustments */
 @media (max-width: 768px) {
   .app-container {
     padding: 1rem;
@@ -185,7 +188,6 @@ select.form-select:focus {
 
   .timetable-card {
     padding: 1rem;
-    overflow-x: auto;
   }
 
   input.form-control,
@@ -211,7 +213,8 @@ select.form-select:focus {
     font-size: 0.8rem;
   }
 
-  .table td, .table th {
+  .table td,
+  .table th {
     padding: 8px;
   }
 
