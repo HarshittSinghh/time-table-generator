@@ -5,10 +5,7 @@ const path = require("path");
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://kiit-7th-sem-time-table-generator.netlify.app'
-}));
-
+app.use(cors({ origin: "*" }));
 
 app.get("/api/timetable", (req, res) => {
   try {
