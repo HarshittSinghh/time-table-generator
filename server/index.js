@@ -3,6 +3,8 @@ const cors = require("cors");
 const XLSX = require("xlsx");
 const path = require("path");
 
+const cron = require(./cron.js)
+
 const app = express();
 
 app.use(cors({ origin: "*" }));
